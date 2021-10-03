@@ -22,7 +22,7 @@ class TweetsController < ApplicationController
     if tweet.destroy
       flash[:notice] = '1レコード追加しました'
     end
-    redirect_to root_path
+    redirect_to root_path 
   end
   def edit
     @tweet = Tweet.find(params[:id])

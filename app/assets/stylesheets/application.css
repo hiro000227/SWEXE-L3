@@ -13,3 +13,103 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    background-color: #ffffff;
+}
+
+#header {
+    float: right;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.nav-list {
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+
+.nav-list-item {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#sidebar {
+    display: block;
+    width: 30%;
+    height: 100px;
+}
+
+/*.sidebar {*/
+/*    display: flex;*/
+/*    width: 30%;*/
+/*    height: 100px;*/
+/*}*/
+
+.sidebar-list-item {
+    list-style: none;
+    padding: 16px;
+    margin: 8px;
+}
+
+#content {
+    float: right;
+    text-align: center;
+    width: 90%;
+    height: 100px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0px;
+    text-align: center;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button::after {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #00bfff;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+
+.button:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn{
+  width: 105px;
+   padding: 13px 0 13px 0;
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  background: #dcdcdc;
+  line-height: 1;
+  border-radius: 50px;
+  transition: all .2s;
+}
+
+.btn:hover{
+  opacity: 0.6;
+}

@@ -5,13 +5,13 @@
 <% end %>
 
 <% @tweet.each do |e| %>
-    <p> 
+    <div id="content">
+     <p> 
         <%= e.message %> 
         <%= ((Time.current - e.tdate) / 60).to_i.to_s + "分前" %>
         <%= link_to '表示', "/tweets/#{e.id}" %> 
         <%= link_to '削除', "/tweets/#{e.id}", method: :delete %> 
         <%= link_to '編集', "/tweets/#{e.id}/edit" %> 
     </p> 
+    </div>
 <% end %>
-
-<%= link_to 'ツイートする', '/tweets/new' %>
